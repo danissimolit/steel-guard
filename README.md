@@ -1,2 +1,2 @@
-# steel-guard
-Tower defence game
+# Steel Guard
+Tower defence game.
