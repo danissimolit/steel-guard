@@ -10,4 +10,12 @@ public class Waypoint : MonoBehaviour
     {
         return _isPlaceable;
     }
+
+    public void PlaceTower(Transform tower)
+    {
+        if (!_isPlaceable) return;
+
+        Instantiate(tower, transform.position, Quaternion.identity);
+        _isPlaceable = false;
+    }
 }

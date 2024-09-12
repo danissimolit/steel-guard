@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class InputHandler : MonoBehaviour
 {
     private Camera _camera;
+    [SerializeField] private Transform _tower;
 
     private void Start()
     {
@@ -25,6 +26,7 @@ public class InputHandler : MonoBehaviour
             if (waypoint != null && waypoint.IsPlaceable())
             {
                 Debug.Log(hitInfo.transform.name);
+                waypoint.PlaceTower(_tower);
             }
         }
     }
